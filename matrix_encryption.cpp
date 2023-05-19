@@ -1,4 +1,4 @@
-// шифровка
+// С€РёС„СЂРѕРІРєР°
 #include <iostream>  
 #include <string> 
 #include <math.h> 
@@ -9,7 +9,6 @@ int main() {
     a = sqrt(str.length());
     char A[1000][1000];
     int i, j, n = 0;
-    //Обработка и адресация каждого символа по отдельности 
     for (int arr = 0; arr < sqrt(str.length()); arr++)
     {
         for (int idx = 0; idx < sqrt(str.length()); idx++)
