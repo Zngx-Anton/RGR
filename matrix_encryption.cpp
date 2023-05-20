@@ -35,7 +35,7 @@ int main() {
         } while (n);
     }
     else {
-        i = 2, j = 1;
+        i = sqrt(str.length())/2, j = (sqrt(str.length())/2)-1;
         do {
             n++;
             for (int k = 0; k < n; k++)
@@ -54,3 +54,12 @@ int main() {
         } while (n);
     }
 }
+    
+    
+            
+    
+                
+
+           
+                
+                
