@@ -3,7 +3,7 @@
 #include <math.h> 
 using namespace std;
 int main() {
-    string str = "abcdefghijklmnop";
+    string str = "abcdefghijklmnopqrstuvwxy";
     int a;
     a = sqrt(str.length());
     char A[1000][1000];
@@ -21,17 +21,17 @@ int main() {
         do {
             n++;
             for (int k = 0; k < n; k++)
-                cout << A[i][j++];
+                cout << A[i][j--];
 
             if (n == sqrt(str.length()))
                 break;
             for (int k = 0; k < n; k++)
-                cout << A[i--][j];
+                cout << A[i++][j];
             n++;
             for (int k = 0; k < n; k++)
-                cout << A[i][j--];
+                cout << A[i][j++];
             for (int k = 0; k < n; k++)
-                cout << A[i++][j];
+                cout << A[i--][j];
         } while (n);
     }
     else {
