@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <fstream>
 using namespace std;
 
 string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -41,17 +41,22 @@ int main()
     cin.ignore();
 
     if(choice == 1)
-    {
+    {    
         cout << "Enter message to encrypt: ";
-        getline(cin, message);
-
+        getline(cin, message);// получаем строку через ввод пользователем с клавиатуры
+        ofstream file("message.txt");  // открываем файл для записи текста
+        file << message;  // записываем текст в файл
+        file.close();  // закрываем файл
+    
         cout << "Encrypted message: " << atbash_cipher(message) << endl;
     }
     else if(choice == 2)
     {
         cout << "Enter message to decrypt: ";
         getline(cin, message);
-
+        ofstream file("message.txt");  // открываем файл для записи текста
+        file << message;  // записываем текст в файл
+        file.close();  // закрываем файл
         cout << "Decrypted message: " << atbash_cipher(message) << endl;
     }
     else
