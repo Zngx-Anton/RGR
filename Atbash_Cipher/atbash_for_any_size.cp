@@ -10,11 +10,11 @@ string atbash_cipher(string input)
 {
     string output = "";
 
-    for (char c : input)
+    for(char c: input)
     {
         size_t index = alphabet.find(c);
 
-        if (index != string::npos)
+        if(index != string::npos)
         {
             output += atbash_alphabet[index];
         }
@@ -40,14 +40,14 @@ int main()
 
     cin.ignore();
 
-    if (choice == 1)
+    if(choice == 1)
     {
         cout << "Enter message to encrypt: ";
         getline(cin, message);
 
         cout << "Encrypted message: " << atbash_cipher(message) << endl;
     }
-    else if (choice == 2)
+    else if(choice == 2)
     {
         cout << "Enter message to decrypt: ";
         getline(cin, message);
