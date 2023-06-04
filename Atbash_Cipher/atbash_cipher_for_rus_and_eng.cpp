@@ -78,13 +78,14 @@ int main()
     cin >> language;
     cin.ignore();
     cout << "Введите исходный текст: ";
-    cin >> text;
+    getline(cin, text);
     write_to_file("source.txt", text);
-
+  
     password = get_password();
 
     // шифрование
     if (language == 1) {
+        
         if (password == "secret") {
             text = read_from_file("source.txt");
             text = atbash(text);
@@ -109,6 +110,7 @@ int main()
 
 
     else if (language == 2) {
+        
         if (password == "secret") {
             text = read_from_file("source.txt");
             text = atbash_rus(text);
@@ -140,12 +142,15 @@ int main()
 
     if (answer == 'p' || answer == 'P') {
         cout << "Файл source.txt:" << endl;
+        cout << endl;
         cout << read_from_file("source.txt") << endl;
-
+        cout << endl;
         cout << "Файл encoded.txt:" << endl;
+        cout << endl;
         cout << read_from_file("encoded.txt") << endl;
-
+        cout << endl;
         cout << "Файл decoded.txt:" << endl;
+        cout << endl;
         cout << read_from_file("decoded.txt") << endl;
     }
 
