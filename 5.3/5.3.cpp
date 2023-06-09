@@ -106,7 +106,7 @@ int main()
     string message, password,key;
     char answer;
     bool all_upper = true;
-    cout << "Введите исходный текст: ";
+    cout << "Введите исходный текст на английском языке заглавными буквами: ";
     getline(cin, message);
     for(char c: message){
         if(islower(c)){
